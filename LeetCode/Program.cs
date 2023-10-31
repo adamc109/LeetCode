@@ -1,32 +1,7 @@
-﻿Solution test = new();
+﻿
 
 
-
-int[] myNum = { 3, 4, 2 };
-
-
-int[] result = test.TwoSum(myNum, 6);
-string numArray = String.Join(",", result);
-Console.WriteLine($"[{numArray}]");
-
-//public class Solution
-//{
-//    public int[] TwoSum(int[] nums, int target)
-//    {
-//        for (int i = 0; i < nums.Length - 1; i++)
-//            for (int j = i + 1; j < nums.Length; j++)
-//                if (nums[i] + nums[j] == target)
-//                    return new int[] { i, j };
-
-
-
-//        return new int[] { };
-//    }
-//}
-
-
-
-public class Solution
+public class TwoNumbers
 {
     public int[] TwoSum(int[] nums, int target)
     {
