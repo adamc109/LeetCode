@@ -22,3 +22,15 @@ public class TwoNumbers
 }
 
 
+public class PalindromeNumber
+{
+    public bool IsPalindrome(int x)
+    {
+        if (x < 0) return false;
+
+        char[] Reverse = x.ToString().ToCharArray();
+        Array.Reverse(Reverse);
+        return new string(Reverse) == x.ToString();
+    }
+}
+
