@@ -1,4 +1,27 @@
-﻿
+﻿string s = "MCMXCIV";
+
+//Console.WriteLine(s);
+
+int value = 0;
+int i = 0;
+//Console.WriteLine(s.Length);
+
+
+while (i < s.Length)
+{
+    if (i < s.Length - 1)
+    {
+        Console.WriteLine(i);
+        //check if in dictonary
+        Console.WriteLine($"{s[i]} {s[i+1]}");
+        i += 2;
+        continue;
+    }
+    //Console.WriteLine(s[i]);
+    else
+        Console.WriteLine(s[i]);
+    i++;
+}
 
 
 public class TwoNumbers
@@ -32,5 +55,10 @@ public class PalindromeNumber
         Array.Reverse(Reverse);
         return new string(Reverse) == x.ToString();
     }
+}
+
+public class RomanToInteger
+{
+
 }
 
