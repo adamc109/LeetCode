@@ -6,6 +6,12 @@ int value = 0;
 int i = 0;
 //Console.WriteLine(s.Length);
 
+Dictionary<string, int> romanPairs = new Dictionary<string, int>()
+{
+    {"IV", 4}, {"IX", 9}
+};
+
+Console.WriteLine(romanPairs["IX"]);
 
 while (i < s.Length)
 {
