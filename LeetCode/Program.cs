@@ -1,34 +1,4 @@
-﻿string s = "MCMXCIV";
-
-//Console.WriteLine(s);
-
-int value = 0;
-int i = 0;
-//Console.WriteLine(s.Length);
-
-Dictionary<string, int> romanPairs = new Dictionary<string, int>()
-{
-    {"IV", 4}, {"IX", 9}
-};
-
-Console.WriteLine(romanPairs["IX"]);
-
-while (i < s.Length)
-{
-    if (i < s.Length - 1)
-    {
-        Console.WriteLine(i);
-        //check if in dictonary
-        Console.WriteLine($"{s[i]} {s[i+1]}");
-        i += 2;
-        continue;
-    }
-    //Console.WriteLine(s[i]);
-    else
-        Console.WriteLine(s[i]);
-    i++;
-}
-
+﻿
 
 public class TwoNumbers
 {
@@ -65,6 +35,35 @@ public class PalindromeNumber
 
 public class RomanToInteger
 {
+    public int RomanToInt(string s)
+    {
+        var map = new Dictionary<char, int>();
+        map.Add('I', 1);
+        map.Add('V', 5);
+        map.Add('X', 10);
+        map.Add('L', 50);
+        map.Add('C', 100);
+        map.Add('D', 500);
+        map.Add('M', 1000);
+        int sum = 0;
+        int last = 0;
+        for (int i = s.Length - 1; i >= 0; i--)
+        {
+            // If the current numeral is smaller than the previous numeral, subtract it.
+            int current = map[s[i]];
+            if (current < last)
+            {
+                sum -= current;
+            }
+            else
+            {
+                sum += current;
+            }
+            //set last to current to compare
+            last = current;
+        }
+        return sum;
+    }
 
 }
 
