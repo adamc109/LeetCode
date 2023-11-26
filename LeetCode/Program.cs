@@ -67,3 +67,20 @@ public class RomanToInteger
 
 }
 
+public class Solution
+{
+    public string? LongestCommonPrefix(string[] strs)
+    {
+        //check array not empty
+        //take first word as base
+        //compare to second word
+        //remove letters if not equal
+        //if two words are the same set second word to base
+        //repeat comparing with 3rd word
+        //once equal return common prefix
+        //if no match return blank
+
+        return null;
+    }
+}
+
